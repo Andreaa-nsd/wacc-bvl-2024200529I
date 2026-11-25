@@ -4,6 +4,8 @@
 **Curso:** Finanzas I (055D) · Facultad de Economía, UNCP · Semestre 2026-II · Unidad II
 **Docente:** Dr. Ciro Iván Machacuay Meza
 **Tema 57:** Estimación del WACC de las empresas listadas en la BVL
+**Repositorio:** https://github.com/Andreaa-nsd/wacc-bvl-2024200529I
+**Entorno:** Python 3.14 en Windows 11; versiones exactas de las librerías en `requirements.txt`
 
 Este repositorio contiene los datos y el código para estimar, cada trimestre entre 2015 y 2025, el costo promedio ponderado de capital (WACC) de 21 empresas no financieras que cotizan en la BVL.
 
@@ -42,8 +44,8 @@ Además se hace una simulación de Monte Carlo (10 000 escenarios, semilla 529) 
 ├── codigo/
 │   ├── 01_extraccion_api.py      Vía 1: Yahoo Finance + BCRPData
 │   ├── 02_scraping_web.py        Vía 2: estados financieros de la SMV
-│   ├── 03_limpieza_union.py      Limpieza y unión por ticker + periodo
-│   └── 04_analisis_wacc.py       Beta, Ke, Kd, t, WACC, tablas, gráficos y Monte Carlo
+│   ├── 03_limpieza_datos.py      Limpieza y unión por ticker + periodo
+│   └── 04_analisis.py            Beta, Ke, Kd, t, WACC, tablas, gráficos y Monte Carlo
 ├── datos_crudos/                 Datos tal como se descargaron (no se modifican)
 ├── datos_procesados/             Base trimestral unida y rendimientos mensuales
 ├── salidas/                      WACC trimestral, tablas 1-4 y figuras 1-2
@@ -62,8 +64,8 @@ py -m pip install -r requirements.txt
 cd codigo
 py 01_extraccion_api.py      # unos 2 minutos
 py 02_scraping_web.py        # unas 1 h 30 min (924 consultas con pausa)
-py 03_limpieza_union.py
-py 04_analisis_wacc.py
+py 03_limpieza_datos.py
+py 04_analisis.py
 ```
 
 Los scripts usan rutas relativas (`Path(__file__).parent.parent`), así que funcionan desde cualquier carpeta. Cada ejecución queda anotada en `log_ejecucion.txt`. Las copias HTML de cada consulta a la SMV (924 archivos, 229 MB) se guardan en `datos_crudos/smv_html/` pero no se suben al repositorio por su tamaño.

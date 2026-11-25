@@ -1,7 +1,8 @@
 # Python 3.14 (Windows 11). Instalar con: py -m pip install -r requirements.txt
+# Versiones exactas obtenidas con "py -m pip freeze" el 25/11/2026
 yfinance==1.8.0
-pandas>=2.2
-numpy>=2.0
-requests>=2.32
-beautifulsoup4>=4.12
-matplotlib>=3.9
+pandas==3.0.6
+numpy==2.5.3
+requests==2.34.2
+beautifulsoup4==4.15.0
+matplotlib==3.11.2

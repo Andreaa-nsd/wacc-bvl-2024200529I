@@ -4,6 +4,14 @@
 **Autora:** Sinche De La Cruz, Andrea Nicolle · 2024200529I
 **Llave de unión:** `ticker` + `periodo` (año y trimestre)
 
+## 0. Fuentes, frecuencia y endpoints
+
+| Fuente | Frecuencia | Endpoint o URL de origen | Variables que aporta |
+|---|---|---|---|
+| Yahoo Finance | Diaria (llevada a mensual y trimestral) | Librería `yfinance` 1.8.0, función `download`, tickers `*.LM` y `EPU` | precio_cierre, volumen, rendimientos, beta |
+| BCRPData (BCRP) | Diaria (promedio trimestral y mensual) | `https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PD04719XD/json/2015-01-01/2025-12-31/esp` | rf_anual_pct |
+| SMV (portal SIMV) | Trimestral | `https://www.smv.gob.pe/SIMV/Frm_InformacionFinanciera` → `Frm_DetalleInfoFinanciera.aspx` | deuda_financiera, patrimonio, gastos financieros, utilidad antes de impuestos, impuesto, ingresos, utilidad neta |
+
 ## 1. Datos crudos
 
 ### `datos_crudos_yahoo_2024200529I.csv` (Yahoo Finance, diario, 2012–2025, 80 559 filas)
