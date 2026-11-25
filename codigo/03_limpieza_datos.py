@@ -4,7 +4,7 @@
 # Fecha de extracción: 2026-11-22
 
 """
-03_limpieza_union.py
+03_limpieza_datos.py
 Limpia y une las tres fuentes crudas en una sola base trimestral (llave: ticker + año + trimestre):
   (a) precios diarios de Yahoo Finance  -> precio de cierre y rendimiento trimestral
   (b) estados financieros de la SMV     -> deuda financiera, patrimonio, gastos financieros, impuestos
