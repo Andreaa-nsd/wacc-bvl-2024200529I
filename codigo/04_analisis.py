@@ -4,7 +4,7 @@
 # Fecha de extracción: 2026-11-22
 
 """
-04_analisis_wacc.py
+04_analisis.py
 A partir de la base procesada (script 03) estima, para cada emisora y trimestre:
   beta  : pendiente de la regresión de rendimientos mensuales de la acción contra el mercado (EPU),
           con los 36 meses previos (mínimo 24)
